@@ -9,8 +9,8 @@ services:
       - "8069:8069"
     volumes:
       - "./config:/etc/odoo"
-      - "./your_project/your-addons:/mnt/extra-addons/your-addons"
-      - "./your_project/extra-addons:/mnt/extra-addons/extra-addons"
+      - "./src/custom-addons:/mnt/extra-addons/custom-addons"
+      - "./src/extra-addons:/mnt/extra-addons/extra-addons"
     command:
       [
         "sh",
@@ -30,7 +30,7 @@ services:
 
 networks:
   default:
-    name: my-network
+    name: odoo-network-dev
     external: true
 
 volumes:
