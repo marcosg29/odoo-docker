@@ -9,26 +9,29 @@ Before running the Docker Compose file, create the external network `my-network`
 ```bash
 docker network create my-network
 ```
+
 ## Usage
 
-Starting the Services run: 
-```bash
-docker-compose up -d
-```
-to start the services in detached mode.
-Accessing Odoo: Access Odoo at http://localhost:8069.
+Starting the docker services in detached mode run:
 
-Stopping the Services: 
 ```bash
-Use docker-compose down
+docker compose up -d
 ```
-to stop the services.
 
-# Odoo Module Scaffolding Script
+Access the Odoo @ <http://localhost:8069> 🚀.
+
+To stop the docker services, run:
+
+```bash
+docker compose down
+```
+
+## Odoo Module Scaffolding Script
 
 A Python script to scaffold a basic folder structure for an Odoo module.
 
-Usage
+### Create a new Odoo module
+
 Run the script with the desired module name as an argument:
 
 ```bash
@@ -42,4 +45,3 @@ The script creates directories for controllers, models, security, views, data, a
 
 Customizing the Module
 After the module structure is created, add your custom code, views, models, and data as needed.
-

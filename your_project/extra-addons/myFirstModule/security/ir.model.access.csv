@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_manager_contractors_tbl,access_contractors_tbl,model_contractors_tbl,mrp.group_mrp_manager,1,1,1,1

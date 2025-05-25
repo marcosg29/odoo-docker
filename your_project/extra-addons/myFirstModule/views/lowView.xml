@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="low_form_view" model="ir.ui.view">
+        <field name="name">low_form_view</field>
+        <field name="model">contractors_tbl</field>
+        <field name="arch" type="xml">
+            <form string="low Form">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1"/>
+                            <field name="address"/>
+                            <field name="phone"/>
+                        </group>
+                        <group>
+                            <field name="email"/>
+                            <field name="website"/>
+                            <field name="contact_person"/>
+                            <field name="notes"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="low_tree_view" model="ir.ui.view">
+        <field name="name">low_tree_view</field>
+        <field name="model">contractors_tbl</field>
+        <field name="arch" type="xml">
+            <tree string="low Tree">
+                <field name="name"/>
+                <field name="address"/>
+                <field name="phone"/>
+                <field name="email"/>
+                <field name="website"/>
+                <field name="contact_person"/>
+                <field name="notes"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="low_action" model="ir.actions.act_window">
+        <field name="name">low</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">contractors_tbl</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Añada un nuevo contractor!
+          </p>
+        </field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="low_menu_root" name="low" web_icon="low,static/description/icon.png"
+              action="low_action" sequence="10"/>
+</odoo>
